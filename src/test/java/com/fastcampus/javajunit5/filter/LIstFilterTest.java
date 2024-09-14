@@ -17,6 +17,10 @@ class LIstFilterTest {
     static void setup() {
         filter = new ListFilter();
         target = new ArrayList<>();
+        createMockData();
+    }
+
+    private static void createMockData() {
         for (int i = 0; i < 100; i++) {
             target.add(i + 1);
         }
