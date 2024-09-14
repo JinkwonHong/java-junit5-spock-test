@@ -1,6 +1,7 @@
 package com.fastcampus.javajunit5.filter;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ class LIstFilterTest {
     }
 
     @Test
+    @DisplayName("from, to를 입력 받아 필터링을 진행할 수 있다.")
     void filterBy() {
         //given
         int from = 10;
@@ -42,6 +44,7 @@ class LIstFilterTest {
     }
 
     @Test
+    @DisplayName("to 값이 from 값 보다 큰 경우 필터링을 하지 않고, 예외를 던진다.")
     void filterFailedWhenFromIsGreaterThanTo() {
         //given
         int from = 20;
