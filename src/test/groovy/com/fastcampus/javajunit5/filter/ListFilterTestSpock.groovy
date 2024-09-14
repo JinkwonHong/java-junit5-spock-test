@@ -35,6 +35,7 @@ class ListFilterTestSpock extends Specification {
         def actual = filter.filterBy(target, from, to)
 
         then:
-        thrown(RuntimeException.class)
+        def error = thrown(RuntimeException.class)
+        error.getMessage() == "from=20 값이 to=10 값보다 더 크거나 같습니다."
     }
 }
